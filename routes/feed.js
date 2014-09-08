@@ -25,7 +25,7 @@ exports.getFeed = function(req, res){
                   });
               })
 
-              // Every time a readable chunk arrives, add it to the episodes array
+              // Every time a readable chunk arrives, add it to the array
               .on('readable', function(){
                   var stream = this, item;
                   while (item = stream.read()){
